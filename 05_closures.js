@@ -2,19 +2,23 @@
 
 // PERSON ==> { name: STRING, age: INT }
 const people = [
-  {name: 'Jane', age: 25},
-  {name: 'John', age: 24}
+  {name: 'Jane', age: 25, hobbies:['soccer', 'tennis']},
+  {name: 'John', age: 24, hobbies:['tennis']}
 ];
 
 const printName = function(person){
   console.log(person.name);
 }
+
 const printAge = function(person){
   console.log(person.age);
 }
 
-people.forEach(printName);
-people.forEach(printAge);
+const printHobbies = function(person){
+  console.log(person.hobbies);
+}
+
+people.forEach(printer('name'));
 
 /****************************/
 

@@ -3,12 +3,9 @@
 const map = function(data, _transformElm){
   const output = [];
 
-  debugger;
-
-  data.forEach(function(current){
+  data.forEach(function(current, i){
     const new_val = _transformElm(current);
-    output.push(new_val);
-    debugger;
+    output.push(_transformElm(current));
   });
 
   return output;
